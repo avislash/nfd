@@ -2,23 +2,6 @@ package models
 
 import "time"
 
-type State string
-
-const (
-	AVAILABLE State = "available"
-	MINTING   State = "minting"
-	RESERVED  State = "reserved"
-	FOR_SALE  State = "forSale"
-	OWNED     State = "owned"
-)
-
-type SaleType string
-
-const (
-	AUCTION    SaleType = "auction"
-	BUY_IT_NOW SaleType = "buyItNow"
-)
-
 type Record struct {
 	AppID            int        `json:"appID"`
 	ASAID            int        `json:"asaID"`
