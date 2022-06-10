@@ -96,7 +96,7 @@ Contributions are what make the open source community such an amazing place to b
 
 
 # Contact
-Avi Misra - | Email: avi@algowatcher.net | NFD: [avislash.algo](https://avislash.algo.xyz) | [![LinkedIn][linkedin-shield]][linkedin-url]
+Avi Misra - | Email: avi@algowatcher.net | NFD: [avislash.algo](https://avislash.algo.xyz) 
 
 
 Project Link: [https://github.com/avislash/nfd](https://github.com/avislash/nfd)
