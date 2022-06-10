@@ -13,7 +13,9 @@ import (
 )
 
 const (
-	baseURL string = "https://api.nf.domains/"
+	MAIN_DOMAIN    string = "https://api.nf.domains/"
+	TESTNET_DOMAIN string = "https://api.testnet.nf.domains/"
+	BETA_DOMAIN    string = "https://api.betanet.nf.domains/"
 )
 
 type Client struct {
@@ -21,11 +23,17 @@ type Client struct {
 	root string
 }
 
-func NewClient() *Client {
-	return &Client{
+func NewClient(options ...ClientOption) *Client {
+	client := &Client{
 		&http.Client{},
-		baseURL,
+		MAIN_DOMAIN,
 	}
+
+	for _, applyOption := range options {
+		applyOption(client)
+	}
+
+	return client
 }
 
 func (c *Client) Version() (models.Version, error) {
